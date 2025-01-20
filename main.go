@@ -1,11 +1,51 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"reflect"
+	"strconv"
+)
 
 var course string = "Computer Science"
 
 func main() {
-	userinput()
+	convtype()
+}
+
+func convtype() {
+	//Converting from float to int & vice versa
+	var cgpa float64 = 3.54
+	var fgpa = int(cgpa)
+	fmt.Printf("Your GP is : %.4f, rounded to %d\n", cgpa, fgpa)
+
+	//Converting from strings to integers - using the strconv package
+	var age10 string = "20"
+	age11, err := strconv.Atoi(age10)
+	if err == nil {
+		fmt.Printf("The variable age11 is of Type : %T, and Value : %v\n", age11, age11)
+	}
+
+	//Converting from integers to strings - using the strconv package
+	var age00 int = 21
+	age01 := strconv.Itoa(age00)
+	fmt.Printf("The variable age01 is of Type : %T, and Value : %v\n", age01, age01)
+}
+
+//Knowing Types of Variables & Values
+
+func gettype() {
+	var grades int = 80
+	var message string = "Excellent"
+
+	// using the %T - format specifier
+	fmt.Printf("The variable grades is of Type : %T\n", grades)
+	fmt.Printf("The variable message is of Type : %T\n", message)
+	fmt.Printf("The value 68.44 is of Type : %T\n", 68.44)
+
+	//using the reflect.TypeOf Method
+	fmt.Printf("The variable grades is of Type : %v\n", reflect.TypeOf(grades))
+	fmt.Printf("The variable message is of Type : %v\n", reflect.TypeOf(message))
+	fmt.Printf("The value 68.44 is of Type : %v\n", reflect.TypeOf(68.44))
 }
 
 // User Input
