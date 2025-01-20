@@ -8,6 +8,7 @@ func main() {
 	userinput()
 }
 
+// User Input
 func userinput() {
 	var name string
 	var isstudent bool
@@ -17,6 +18,7 @@ func userinput() {
 	}
 }
 
+// Zero Values
 func ZeroValues() {
 	var (
 		a int
@@ -28,12 +30,14 @@ func ZeroValues() {
 	fmt.Printf("The Zero Values of types,\nint(%T) : %d,\nstring(%T) : %s,\nrune(%T) : %s,\nfloat64(%T) : %f,\nbool(%T) : %t", a, a, b, b, c, string(c), d, d, e, e)
 }
 
+// Global Variables
 func glovar() {
 	fmt.Println(course)
 	course = "CSC"
 	fmt.Println(course)
 }
 
+// Declaring Variables
 func DeclaringVariable() {
 	var greeting string = "Hello World"
 	fmt.Println(greeting)
@@ -50,6 +54,7 @@ func DeclaringVariable() {
 
 }
 
+// PrintF function & format specifiers
 func printff() {
 	// format specifiers
 	// %v - formats value in a default format
