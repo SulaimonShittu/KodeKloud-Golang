@@ -9,7 +9,59 @@ import (
 var course string = "Computer Science"
 
 func main() {
-	convtype()
+	switchoperator()
+}
+
+func switchoperator() {
+	// Switch on variables
+	var age int = 19
+	switch age {
+	case 18:
+		fmt.Println("Welcome to the legal age.")
+	case 19:
+		fmt.Println("You are now a big boy.")
+		fallthrough
+	case 20:
+		fmt.Println("The famous 20's")
+		fallthrough
+	default:
+		fmt.Println("You sha have an age.")
+	}
+
+	//switch on conditionals
+	_, err := fmt.Scanf("%d", &age)
+	if err == nil {
+		switch {
+		case age < 18:
+			fmt.Println("You aren't up to legal age yet.")
+		case age >= 18:
+			fmt.Println("You can now vote & drink alcohol.")
+		}
+	}
+}
+
+func bitwiseoperators() {
+	//bitwise and
+	var a, b int = 16, 25
+	z := a & b
+	fmt.Println(z)
+
+	//bitwise or
+	z = a | b
+	fmt.Println(z)
+
+	//bitwise xor
+	z = a ^ b
+	fmt.Println(z)
+
+	//bitwise left-shift
+	z = 566 << 6
+	fmt.Println(z)
+
+	//bitwise right-shift
+	z = 456 >> 4
+	fmt.Println(z)
+
 }
 
 func convtype() {
