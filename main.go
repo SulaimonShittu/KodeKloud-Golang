@@ -9,7 +9,21 @@ import (
 var course string = "Computer Science"
 
 func main() {
-	switchoperator()
+	forloops()
+}
+
+func forloops() {
+	//traditional for loops
+	for i := 1; i <= 5; i++ {
+		fmt.Println(i * i)
+	}
+
+	//while loop styled loops
+	a := 1
+	for a <= 5 {
+		fmt.Println(a * a)
+		a++
+	}
 }
 
 func switchoperator() {
