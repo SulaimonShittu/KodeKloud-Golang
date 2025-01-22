@@ -13,7 +13,8 @@ func main() {
 }
 
 func arrays() {
-
+	var scores [3]int = [3]int{87, 76, 89}
+	fmt.Println(scores)
 }
 
 func forloops() {
