@@ -12,6 +12,10 @@ func main() {
 	forloops()
 }
 
+func arrays() {
+
+}
+
 func forloops() {
 	//traditional for loops
 	for i := 1; i <= 5; i++ {
