@@ -9,12 +9,87 @@ import (
 var course string = "Computer Science"
 
 func main() {
-	forloops()
+	arrays()
+}
+
+func slices() {
+	// declaring & initializing a slice
+	pets := []string{"Cats", "Dogs", "Mice"}
+	fmt.Println(pets)
+
+	arr := [10]int{10, 20, 30, 40, 50, 60, 70, 80, 90, 100}
+	slice_1 := arr[1:8]
+	fmt.Println(slice_1)
+	slice_2 := arr[0:3]
+	fmt.Println(slice_2)
+
+	slice_3 := make([]int, 8, 12)
+	for k, _ := range slice_3 {
+		slice_3[k] = k * k
+	}
+
+	// slice refrencing arrays
+	ages := [5]int{19, 20, 21, 22, 23}
+	slice_age := ages[1:3]
+	fmt.Println(ages)
+	fmt.Println(slice_age)
+	fmt.Println("After modification")
+	slice_age[0] = 42
+	fmt.Println(ages)
+	fmt.Println(slice_age)
+	fmt.Println(len(slice_age))
+	fmt.Println(cap(slice_age))
+
+	//appending
+	slice_age = append(slice_age, 24, 31, 27)
+	fmt.Println(len(slice_age))
+	fmt.Println(cap(slice_age))
+
+	//appending two slices
+	slice_5 := append(slice_2, slice_3...)
+	fmt.Println(slice_5)
+
+	//copying slcies
+	slice_6 := []int{5, 9, 2, 7, 4}
+	slice_7 := make([]int, 5, 10)
+	copy(slice_7, slice_6)
 }
 
 func arrays() {
-	var scores [3]int = [3]int{87, 76, 89}
-	fmt.Println(scores)
+	// array initialization
+	var fruits [2]string = [2]string{"Apples", "Oranges"}
+	fmt.Println(fruits)
+
+	marks := [3]int{10, 20, 30}
+	fmt.Println(marks)
+
+	names := [...]string{"Rachel", "Phoebe", "Monica"}
+	fmt.Println(names)
+
+	// len method
+	fmt.Println(len(fruits))
+	fmt.Println(len(marks))
+	fmt.Println(len(names))
+
+	//array indexing
+	var songs [3]string = [3]string{"Genie", "Tell me", "Shotta Soul"}
+	songs[0] = "Never Lie"
+
+	for i := 0; i < len(songs); i++ {
+		fmt.Println(songs[i])
+	}
+
+	for k, v := range songs {
+		fmt.Printf("%d => %s\n", k, v)
+	}
+
+	//Multi-dimensional arrays
+	var scores [3][2]int = [3][2]int{
+		{99, 87},
+		{89, 97},
+		{79, 78},
+	}
+	fmt.Println(scores[1][0])
 }
 
 func forloops() {
@@ -29,6 +104,11 @@ func forloops() {
 		fmt.Println(a * a)
 		a++
 	}
+	//Range-styled for loops
+	for i := range 10 {
+		fmt.Printf("%d x %d = %d\n", i, i, i*i)
+	}
+
 }
 
 func switchoperator() {
@@ -40,7 +120,7 @@ func switchoperator() {
 	case 19:
 		fmt.Println("You are now a big boy.")
 		fallthrough
-	case 20:
+	case 20, 21, 22:
 		fmt.Println("The famous 20's")
 		fallthrough
 	default:
