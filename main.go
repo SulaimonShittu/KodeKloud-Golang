@@ -15,6 +15,7 @@ func main() {
 func maps() {
 	mp := map[string]int{}
 	fmt.Println(mp)
+
 }
 
 func slices() {
