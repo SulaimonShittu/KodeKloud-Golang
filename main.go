@@ -12,6 +12,11 @@ func main() {
 	arrays()
 }
 
+func maps() {
+	mp := map[string]int{}
+	fmt.Println(mp)
+}
+
 func slices() {
 	// declaring & initializing a slice
 	pets := []string{"Cats", "Dogs", "Mice"}
