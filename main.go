@@ -15,7 +15,7 @@ func main() {
 func maps() {
 	mp := map[string]int{}
 	fmt.Println(mp)
-
+	mp["Janis"] = 33
 }
 
 func slices() {
