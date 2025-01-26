@@ -9,13 +9,37 @@ import (
 var course string = "Computer Science"
 
 func main() {
-	arrays()
+	maps()
 }
 
 func maps() {
-	mp := map[string]int{}
-	fmt.Println(mp)
-	mp["Janis"] = 33
+	codes := map[string]string{"En": "English", "Hi": "Hindi", "Fr": "French"}
+	fmt.Println(len(codes))
+
+	// accessing a key value
+	fmt.Println(codes["Hi"])
+	fmt.Println(codes["Fr"])
+
+	// key validity
+	english, found := codes["En"]
+	if found {
+		fmt.Printf("%s is %t\n", english, found)
+	}
+	french, found := codes["Fr"]
+	if found {
+		fmt.Printf("%s is %t\n", french, found)
+	}
+
+	// updating a value
+	codes["Sl"] = "Slovenia"
+	codes["Sl"] = "Slovakia"
+
+	// deleting a value
+	delete(codes, "Hi")
+	fmt.Println(codes)
+
+	// truncating a map
+	codes = make(map[string]string)
 }
 
 func slices() {
@@ -242,7 +266,7 @@ func DeclaringVariable() {
 	// Variables of same type dclaration
 	var a, b int = 20, 45
 	// Varaibles of different types declaration
-	fmt.Println("a : ", a, " ", "b ; ", b)
+	fmt.Println("a : ", a, " ", "b : ", b)
 	var (
 		name string = "Sulaimon"
 		age  int    = 21
@@ -258,7 +282,7 @@ func printff() {
 	// %T - type of the value
 	// %c -character
 	// %q - quoted character or string
-	// %d - used with decimals
+	// %d - used with numbers/decimals
 	// %s - plain string
 	// %f - floating points
 	// %t - boolean
