@@ -17,6 +17,10 @@ func function() {
 
 }
 
+func returnTypes() {
+
+}
+
 func maps() {
 	codes := map[string]string{"En": "English", "Hi": "Hindi", "Fr": "French"}
 	fmt.Println(len(codes))
