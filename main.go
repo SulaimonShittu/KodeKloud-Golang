@@ -13,12 +13,24 @@ func main() {
 }
 
 // functions
-func function() {
 
+//variadicfunctions
+
+// named returns
+func operation(a int, b int) (sum int, dif int) {
+	sum, dif = a+b, a-b
+	return
 }
 
-func returnTypes() {
+// function basics
+func greetings() {
+	fmt.Println("Hey Joe !")
+}
 
+// returning a value
+func addNumbers(a int, b int) (sum int) {
+	sum = a + b
+	return
 }
 
 func maps() {
