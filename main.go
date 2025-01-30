@@ -33,6 +33,11 @@ func addNumbers(a int, b int) (sum int) {
 	return
 }
 
+func subNumbers(a int, b int) int {
+	dif := a - b
+	return dif
+}
+
 func maps() {
 	codes := map[string]string{"En": "English", "Hi": "Hindi", "Fr": "French"}
 	fmt.Println(len(codes))
