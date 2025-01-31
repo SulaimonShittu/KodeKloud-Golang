@@ -9,7 +9,7 @@ import (
 var course string = "Computer Science"
 
 func main() {
-	maps()
+	greetings()
 }
 
 // functions
@@ -31,6 +31,10 @@ func greetings() {
 func addNumbers(a int, b int) (sum int) {
 	sum = a + b
 	return
+}
+
+func multipleParams(values ...int) {
+
 }
 
 func subNumbers(a int, b int) int {
