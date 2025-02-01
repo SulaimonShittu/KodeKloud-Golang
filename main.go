@@ -34,7 +34,11 @@ func addNumbers(a int, b int) (sum int) {
 }
 
 func multipleParams(values ...int) {
-
+	sum := 0
+	for v := range values {
+		sum += v
+	}
+	fmt.Println("The sum of the slice : ", values, " is ", sum)
 }
 
 func subNumbers(a int, b int) int {
