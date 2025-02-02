@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math"
 	"reflect"
 	"strconv"
 )
@@ -10,6 +11,14 @@ var course string = "Computer Science"
 
 func main() {
 	greetings()
+
+	circleStuff := func(radius int) (d int, c float32) {
+		d = radius * 2
+		c = 2 * math.Pi * float32(radius)
+		return
+	}
+
+	circleStuff(5)
 }
 
 // functions
