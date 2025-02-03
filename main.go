@@ -36,6 +36,12 @@ func greetings() {
 	fmt.Println("Hey Joe !")
 }
 
+func circleStuff(radius int) (int, float32) {
+	d := radius * 2
+	c := 2 * 3.14 * float32(radius)
+	return d, c
+}
+
 // returning a value
 func addNumbers(a int, b int) (sum int) {
 	sum = a + b
